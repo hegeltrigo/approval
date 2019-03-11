@@ -1,4 +1,4 @@
-class CreateApprovalTables < ActiveRecord::Migration[5.0]
+class CreateApprovalTables < ActiveRecord::Migration
   def change
     create_table :approval_requests do |t|
       t.integer  :request_user_id, null: false
