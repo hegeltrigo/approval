@@ -6,7 +6,7 @@ module Approval
     EVENTS = %w[create update destroy perform].freeze
 
     belongs_to :request, class_name: :"Approval::Request", inverse_of: :items
-    belongs_to :resource, polymorphic: true, optional: true
+    belongs_to :resource, polymorphic: true#, optional: true
 
     serialize :params, Hash
 
@@ -50,7 +50,7 @@ module Approval
       def exec_perform
         raise NotImplementedError unless resource_model.respond_to?(:perform)
 
-        if resource_model.method(:perform).arity > 0
+        if params.count > 0
           resource_model.perform(params)
         else
           resource_model.perform

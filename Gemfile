@@ -5,7 +5,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gemspec
 
 gem "appraisal"
-gem "rails", ">= 5.0.0"
+gem "rails", ">= 4.2.0"
 
 group :development, :test do
   gem "sqlite3", platform: :mri
