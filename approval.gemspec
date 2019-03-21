@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/yhirano55/approval"
   s.license     = "MIT"
 
-  s.required_ruby_version = ">= 2.2.2"
+  s.required_ruby_version = ">= 2.1.1"
 
   s.add_development_dependency "bundler", "~> 1.15"
 
