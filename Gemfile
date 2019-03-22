@@ -4,7 +4,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gemspec
 
-gem "appraisal"
+# gem "appraisal"
 gem "rails", ">= 4.2.0"
 
 group :development, :test do
