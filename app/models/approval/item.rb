@@ -3,6 +3,7 @@ module Approval
     class UnexistResource < StandardError; end
 
     self.table_name = :approval_items
+    
     EVENTS = %w[create update destroy perform].freeze
 
     belongs_to :request, class_name: :"Approval::Request", inverse_of: :items
